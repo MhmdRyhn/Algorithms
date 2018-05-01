@@ -3,8 +3,8 @@
 
 
 def nth_permutation(alpha, n):
-    # alpha is the list, and
-    # n is the nth number
+    # alpha is the list of item, and
+    # n is the nth permutation, that is to be found out
     perm = []
     t = len(alpha)
     fact = [1 for i in range(t)]
