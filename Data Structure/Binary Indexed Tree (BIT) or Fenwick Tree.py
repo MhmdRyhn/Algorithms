@@ -14,7 +14,7 @@ class BIT:
         self.__sz = len(data)
         self.__data += data
         self.__sz = len(self.__data)
-        self.__tree = [0 for i in range(self.__sz)]
+        self.__tree = [0 for i in range(self.__sz + 1)]
         self.__create_tree()
 
 
@@ -66,4 +66,3 @@ if __name__ == '__main__':
     bit.update(3, -6)
     print('After adding, Sum of index 1 to 4:', bit.query(4))
     print('Sum of index 1 to 5:', bit.query(5))
-
