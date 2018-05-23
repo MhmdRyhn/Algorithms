@@ -6,15 +6,15 @@ https://www.topcoder.com/community/data-science/data-science-tutorials/binary-in
 
 
 class BIT:
-    data = [0]
-    tree = None
-    sz = None
+    __data = [0]
+    __tree = None
+    __sz = None
 
     def __init__(self, data):
-        self.sz = len(data)
-        self.data += data[:]
-        self.sz = len(self.data)
-        self.tree = [0 for i in range(self.sz)]
+        self.__sz = len(data)
+        self.__data += data
+        self.__sz = len(self.__data)
+        self.__tree = [0 for i in range(self.__sz)]
         self.__create_tree()
 
 
@@ -22,24 +22,24 @@ class BIT:
     This function creates the initial tree
     """
     def __create_tree(self):
-        for i in range(1, self.sz):
+        for i in range(1, self.__sz):
             x = i
 
-            while x <= self.sz:
-                self.tree[x] += self.data[i]
+            while x <= self.__sz:
+                self.__tree[x] += self.__data[i]
                 x += x & -x
 
 
     """
-    This function updates the value 
-    at a specific position in array
+    This function adds the value 
+    at a specific position in array 
     """
     def update(self, pos, val):
         if pos == 0:
             return None
 
-        while pos <= self.sz:
-            self.tree[pos] += val
+        while pos <= self.__sz:
+            self.__tree[pos] += val
             pos += pos & -pos
 
 
@@ -50,7 +50,7 @@ class BIT:
         s = 0
 
         while pos > 0:
-            s += self.tree[pos]
+            s += self.__tree[pos]
             pos -= pos & -pos
 
         return s
@@ -59,8 +59,8 @@ class BIT:
 
 
 if __name__ == '__main__':
-    data = [8, 7, 6, 5, 4, 3, 2, 1]
-    bit = BIT(data)
+    __data = [8, 7, 6, 5, 4, 3, 2, 1]
+    bit = BIT(__data)
     print('Sum of index 1 to 3:', bit.query(3))
     print('Before adding, Sum of index 1 to 4:', bit.query(4))
     bit.update(3, -6)
