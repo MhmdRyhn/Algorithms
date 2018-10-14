@@ -42,8 +42,12 @@ if __name__ == '__main__':
     adj = [[] for i in range(node)]
     for i in range(edge):
         x = input().split()
-        adj[int(x[0])].append((int(x[1]), int(x[2])))
+        """
+        edge description: u v edge_value
+        """
+        adj[int(x[0])].append((int(x[2]), int(x[1])))
 
     source = 0
     print(MST(node, adj).mst(source))
 
+    
