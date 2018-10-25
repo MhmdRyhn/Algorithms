@@ -111,7 +111,6 @@ void push_node_to_back(int v)
         new_node->next = NULL;
         tail->next = new_node;
         tail = tail->next;
-        number_of_node++;
     }
     else
     {
