@@ -1,8 +1,8 @@
 /*
-    ** Make all substring of length 1 as palindrome
+    (1) Make all substring of length 1 as palindrome
         for i = 0 to string_length-1
             board[i][i] = 1;
-    ** Now, use the following conditions to evaluate for all the substrings of length > 1
+    (2) Now, use the following conditions to evaluate for all the substrings of length > 1
         if string[i] == string[i+substring_length-1]:
             board[i][i+substring_length-1] = 2 + board[i+1][i+substring_length-2]
         else:
