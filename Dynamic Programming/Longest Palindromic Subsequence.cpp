@@ -22,7 +22,7 @@ int main()
     // freopen("in.txt", "r", stdin);
 
     /// sample input: annqwnbvexrvttyafgatrqqewghiqlp
-    /// sample output: length-> 13, palindromic subsequence: qwertafatrewq
+    /// sample output: length-> 13, palindromic subsequence-> qwertafatrewq
     string str;
 
     cin>>str;
