@@ -56,7 +56,7 @@ int main()
                 board[i][j] = 0;
         }
     }
-    cout<<"Lowest Common Substring Length: "<<maxlen<<endl;
+    cout<<"Longest Common Substring Length: "<<maxlen<<endl;
 
     string maxstr = "";
     while(maxlen)
@@ -66,7 +66,7 @@ int main()
         maxlen -- ;
     }
 
-    cout<<"Lowest Common Substring: "<<maxstr<<endl;
+    cout<<"Longest Common Substring: "<<maxstr<<endl;
 
 
     return 0;
